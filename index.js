@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 
 // Serve the HTML file
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index2.html');
+  res.sendFile(__dirname, 'index2.html');
 });
 
 app.use(express.json());
