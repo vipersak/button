@@ -5,6 +5,8 @@ import nodemailer from'nodemailer';
 const port = 5000;
 
 import fetch from 'node-fetch';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 
 
@@ -17,7 +19,7 @@ app.use(bodyParser.json());
 
 // Serve the HTML file
 app.get('/', (req, res) => {
-  res.sendFile('C:\\Users\\kkmusa\\Desktop\\Work\\public\\index2.html');
+  res.sendFile(__dirname + '/index2.html');
 });
 
 app.use(express.json());
